@@ -1,0 +1,54 @@
+JFDML JFormDesigner: "7.0.5.0.404" Java: "15.0.1" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :p:221:p, comp label_clientcount:::p::p, space :128::x}, seq l {space :p::p, par t {seq t {comp jLabel3:::p::p, space u:::p, comp textfield_port:::p:100:p, space :0:0:x}, seq l {par l {comp scrollPane1::l:p:352:p, seq l {space :p:18:p, comp jLabel2:::p::p}}, space :::p, par l {seq {comp label_status:::p::p, space :0:0:x}, comp button_server:::::x}}}, space :p:353:p}}"
+			"$verticalGroup": "par l {seq l {space :p:9:p, par b {comp jLabel2::b:p::p, comp label_status::b:p::p}, space :::p, par b {comp jLabel3::b:p::p, comp textfield_port::b:p::p}, space :p:21:p, par l {comp button_server:::p:34:p, comp scrollPane1:::p:207:p}, space ::19:x, comp label_clientcount:::p::p, space :::p}}"
+		} ) {
+			name: "this"
+			"defaultCloseOperation": 3
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button_server"
+				"font": new java.awt.Font( "Segoe UI", 0, 18 )
+				"text": "Запустить сервер"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button_serverActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label_status"
+				"font": new java.awt.Font( "Segoe UI", 0, 18 )
+				"text": "Сервер не запущен "
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabel2"
+				"font": new java.awt.Font( "Segoe UI", 0, 18 )
+				"text": "IP:"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabel3"
+				"font": new java.awt.Font( "Segoe UI", 0, 18 )
+				"text": "Port:"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label_clientcount"
+				"font": new java.awt.Font( "Segoe UI", 0, 18 )
+				"text": "jLabel4"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textfield_port"
+				"font": new java.awt.Font( "Segoe UI", 0, 18 )
+				"text": "3000"
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				add( new FormComponent( "javax.swing.JTextArea" ) {
+					name: "ta_events"
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 545, 385 )
+			"location": new java.awt.Point( 0, 0 )
+		} )
+	}
+}

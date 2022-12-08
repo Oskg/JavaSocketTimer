@@ -1,0 +1,53 @@
+JFDML JFormDesigner: "7.0.5.1.409" Java: "11.0.14.1" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {par t {comp label_status:::p::p, par t:::p {seq t {space :::p, comp scrollPane1:::p:352:p}, seq t {space :p:27:p, comp jLabel2:::p::p, space :::p, comp ip_ta:::p:168:p, space :::x, comp jLabel3:::p::p}}}, space u:::p, par l {seq {comp button_server:::::x, space :p:353:p}, seq {comp ta_port:::p:100:p, space :::x}}}}"
+			"$verticalGroup": "par l {seq l {space :p:14:p, comp label_status:::p::p, space :::p, par b {comp ta_port::b:p::p, comp jLabel3::b:p::p, comp ip_ta::b:p::p, comp jLabel2::b:p::p}, space :p:21:p, par l {comp button_server:::p:34:p, comp scrollPane1:::p:207:p}, space ::25:x}}"
+		} ) {
+			name: "this"
+			"defaultCloseOperation": 3
+			"$sizePolicy": 1
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button_server"
+				"font": new java.awt.Font( "Segoe UI", 0, 18 )
+				"text": "Запустить сервер"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button_serverActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label_status"
+				"font": new java.awt.Font( "Segoe UI", 0, 18 )
+				"text": "Сервер не запущен "
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabel2"
+				"font": new java.awt.Font( "Segoe UI", 0, 18 )
+				"text": "IP:"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabel3"
+				"font": new java.awt.Font( "Segoe UI", 0, 18 )
+				"text": "Порт:"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "ta_port"
+				"font": new java.awt.Font( "Segoe UI", 0, 18 )
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				add( new FormComponent( "javax.swing.JTextArea" ) {
+					name: "ta_events"
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "ip_ta"
+				"font": new java.awt.Font( "Segoe UI", 0, 18 )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 560, 365 )
+			"location": new java.awt.Point( 0, 0 )
+		} )
+	}
+}

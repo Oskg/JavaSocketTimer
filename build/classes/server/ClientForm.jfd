@@ -1,0 +1,89 @@
+JFDML JFormDesigner: "7.0.5.0.404" Java: "15.0.1" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :p:34:p, par l {seq {par t:::p {comp jScrollPane1::l:::x, seq {par l {comp tf_ip::l:p:156:p, comp jLabel1::l:p::p}, space :p:128:p, par l {comp jLabel2:::p::p, seq l {comp tf_port:::p:169:p, space :p:58:p, comp bt_connect:::p:169:p}}}}, space :::x}, seq {par l {comp jLabel5:::p::p, comp lb_time:::p::p, seq l {par l {comp jLabel3:::p::p, comp tf_eventname:::p:245:p}, space :p:35:p, par l {comp jLabel4:::p::p, seq {comp tf_eventtime:::p:190:p, space :p:41:p, comp bt_add:::p::p}}}}, space :0:0:x}}}, seq l {space :p:97:p, comp lb_event:::p:537:p, space :0:0:x}}"
+			"$verticalGroup": "par l {seq {space :::p, par b {comp jLabel1::b:p::p, comp jLabel2::b:p::p}, par l {seq {space :p:10:p, comp tf_ip:::p::p}, seq l {space :::p, par b {comp tf_port::b:p::p, comp bt_connect::b:p::p}}}, space s:::p, comp lb_time:::p::p, space s:::p, comp jScrollPane1:::p:212:p, space s:::p, comp jLabel5:::p::p, space :p:28:p, comp lb_event:::p::p, space :::x, par b {comp jLabel3::b:p::p, comp jLabel4::b:p::p}, space u:::p, par b {comp tf_eventname::b:p::p, comp tf_eventtime::b:p::p, comp bt_add::b:p::p}, space :p:32:p}}"
+		} ) {
+			name: "this"
+			"defaultCloseOperation": 3
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "bt_connect"
+				"font": new java.awt.Font( "Segoe UI", 0, 18 )
+				"text": "Подключиться"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "bt_connectActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "tf_ip"
+				"font": new java.awt.Font( "Segoe UI", 0, 18 )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "tf_port"
+				"font": new java.awt.Font( "Segoe UI", 0, 18 )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabel1"
+				"font": new java.awt.Font( "Segoe UI", 0, 18 )
+				"text": "IP:"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabel2"
+				"font": new java.awt.Font( "Segoe UI", 0, 18 )
+				"text": "Port:"
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "jScrollPane1"
+				add( new FormComponent( "javax.swing.JTextArea" ) {
+					name: "ta_events"
+					"columns": 20
+					"rows": 5
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "tf_eventname"
+				"font": new java.awt.Font( "Segoe UI", 0, 18 )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "tf_eventtime"
+				"font": new java.awt.Font( "Segoe UI", 0, 18 )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "bt_add"
+				"font": new java.awt.Font( "Segoe UI", 0, 18 )
+				"text": "Добавить событие"
+				"toolTipText": ""
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "bt_addActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabel3"
+				"font": new java.awt.Font( "Segoe UI", 0, 18 )
+				"text": "Название события:"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabel4"
+				"font": new java.awt.Font( "Segoe UI", 0, 18 )
+				"text": "Время События"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "lb_time"
+				"font": new java.awt.Font( "Segoe UI", 0, 18 )
+				"text": "Time"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabel5"
+				"font": new java.awt.Font( "Segoe UI", 0, 18 )
+				"text": "Последнее событие:"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "lb_event"
+				"font": new java.awt.Font( "Segoe UI", 0, 36 )
+				"text": "  "
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 730, 600 )
+			"location": new java.awt.Point( 0, 0 )
+		} )
+	}
+}
